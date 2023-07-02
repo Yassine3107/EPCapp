@@ -889,7 +889,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   margin: 0;
   font-size: 14px;
 
-`,Fy=()=>C.jsx(Ly,{children:C.jsxs(Ry,{children:[C.jsx($y,{src:Zm,alt:"Company Logo"}),C.jsxs(My,{children:[C.jsxs(zf,{href:"mailto:info@example.com",children:[C.jsx(jf,{icon:Xm}),"Email"]}),C.jsxs(zf,{href:"tel:+1234567890",children:[C.jsx(jf,{icon:Km}),"Call Us"]})]}),C.jsx(Lf,{children:"EPC 24/7 | België | Antwerpen"}),C.jsxs(Lf,{children:["© ",new Date().getFullYear()," All Rights Reserved"]})]})}),Dy="/EPCapp/assets/epccheck-8f25a4fc.png",Jm=e=>ho`
+`,Fy=()=>C.jsx(Ly,{children:C.jsxs(Ry,{children:[C.jsx($y,{src:Zm,alt:"Company Logo"}),C.jsxs(My,{children:[C.jsxs(zf,{href:"mailto:info@example.com",children:[C.jsx(jf,{icon:Xm}),"Email"]}),C.jsxs(zf,{href:"tel:+1234567890",children:[C.jsx(jf,{icon:Km}),"Bel Ons"]})]}),C.jsx(Lf,{children:"EPC 24/7 | België | Antwerpen"}),C.jsxs(Lf,{children:["© ",new Date().getFullYear()," All Rights Reserved"]})]})}),Dy="/EPCapp/assets/epccheck-8f25a4fc.png",Jm=e=>ho`
     margin-left: ${e};
     margin-right: ${e};
 `,Uy=e=>ho`
