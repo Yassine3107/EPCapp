@@ -10,6 +10,7 @@ const ContactPageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 2rem;
+  margin-bottom: 60px;
 `;
 
 const ContactTitle = styled.h1`
@@ -59,7 +60,7 @@ const ContactIcon = styled(FontAwesomeIcon)`
 
 const ContactPage = () => {
   return (
-    <ContactPageContainer>
+    <ContactPageContainer id="contact">
       <ContactTitle>Contact Us</ContactTitle>
       <ContactCardContainer>
         <ContactCard>

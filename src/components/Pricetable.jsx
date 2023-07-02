@@ -43,6 +43,7 @@ const CardContainer = styled.div`
     width: 70%;
     ${marginX('auto')};
     margin-top: 30px;
+    margin-bottom: 80px;
 
     @media (max-width: 1200px) {
         grid-template-columns: 1fr 1fr 1fr

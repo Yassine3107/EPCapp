@@ -146,16 +146,20 @@ function Navbar() {
           <MenuItem href="/" onClick={closeMenu}>
             Home
           </MenuItem>
-          <MenuItem href="/tarieven" onClick={closeMenu}>
+          <MenuItem href="#pricetable" onClick={closeMenu}>
             Tarieven
           </MenuItem>
-          <MenuItem href="/contact" onClick={closeMenu}>
+          <MenuItem href="#contact" onClick={closeMenu}>
             Contact
+          </MenuItem>
+          <MenuItem href="#whyus" onClick={closeMenu}>
+            Over ons
           </MenuItem>
         </Menu>
         <NavItem href="/">Home</NavItem>
-        <NavItem href="/tarieven">Tarieven</NavItem>
-        <NavItem href="/contact">Contact</NavItem>
+        <NavItem href="/#pricetable">Tarieven</NavItem>
+        <NavItem href="/#contact">Contact</NavItem>
+        <NavItem href="/#whyus">Over ons</NavItem>
       </NavBar>
     );
 }

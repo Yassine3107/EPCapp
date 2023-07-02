@@ -20,6 +20,7 @@ const Container = styled.div`
     width: 90%;
     ${marginX('auto')};
     margin-top: 40px;
+    margin-bottom: 80px;
 
     @media (max-width: 1100px) {
         grid-template-columns: 1fr;
@@ -108,7 +109,7 @@ function Hero() {
         <ContainerText>
             <Title>Uw Weg naar <br></br> Efficiëntie <TitleHighlight>Besparingen</TitleHighlight></Title>
             <SubTitle>Wij bieden snelle en betrouwbare keuringsdiensten aan tegen competitieve prijzen, volledig in overeenstemming met de meest recente richtlijnen van de Vlaamse Overheid.</SubTitle>
-            <Button>Contacteer ons</Button>
+            <Button><a href="#contact" style={{color: 'black'}}>Contacteer ons</a></Button>
         </ContainerText>
         <ContainerImage>
             <HeroImage src={PlumberImage}></HeroImage>

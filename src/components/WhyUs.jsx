@@ -8,11 +8,20 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  margin-bottom: 30px;
 `;
 
 const Title = styled.h2`
-  font-size: 24px;
+  font-size: 3rem;
   margin-bottom: 20px;
+
+  @media (max-width: 1200px) {
+      font-size: 2rem; /* Adjust the font size for smaller screens */
+  }
+
+  @media (max-width: 1100px) {
+      font-size: 1.5rem;
+  } 
 `;
 
 const Reason = styled.div`
@@ -38,7 +47,7 @@ const Text = styled.p`
 
 const WhyUs = () => {
   return (
-    <Container>
+    <Container id="whyus">
       <Title>Waarom voor ons kiezen?</Title>
       <Reason>
         <Icon icon={faShieldHalved} />
