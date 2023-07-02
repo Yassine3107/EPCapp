@@ -849,7 +849,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   font-size: 3rem;
   margin-bottom: 1rem;
   color: #0071F2;
-`,jy=()=>C.jsxs(Ay,{id:"contact",children:[C.jsx(Iy,{children:"Contact Us"}),C.jsxs(zy,{children:[C.jsxs(Af,{children:[C.jsx(If,{icon:Km}),C.jsx("h3",{children:"Telefonisch contact"}),C.jsxs("p",{children:["Bel ons op ",C.jsx(Oy,{number:"1234567890"})," voor directe ondersteuning en advies. Ons team staat klaar om uw vragen te beantwoorden over energieprestatiecertificaten."]})]}),C.jsxs(Af,{children:[C.jsx(If,{icon:Xm}),C.jsx("h3",{children:"E-mailcontact"}),C.jsxs("p",{children:["Voor schriftelijke communicatie, stuur een e-mail naar ",C.jsx(Ty,{email:"info@example.com"}),". Ons toegewijde team zal snel reageren op uw vragen over energieprestatiecertificaten."]})]})]})]}),Zm="/EPCapp/assets/logo-c8d8d48a.png",Ly=z.footer`
+`,jy=()=>C.jsxs(Ay,{id:"contact",children:[C.jsx(Iy,{children:"Contacteer Ons"}),C.jsxs(zy,{children:[C.jsxs(Af,{children:[C.jsx(If,{icon:Km}),C.jsx("h3",{children:"Telefonisch contact"}),C.jsxs("p",{children:["Bel ons op ",C.jsx(Oy,{number:"1234567890"})," voor directe ondersteuning en advies. Ons team staat klaar om uw vragen te beantwoorden over energieprestatiecertificaten."]})]}),C.jsxs(Af,{children:[C.jsx(If,{icon:Xm}),C.jsx("h3",{children:"E-mailcontact"}),C.jsxs("p",{children:["Voor schriftelijke communicatie, stuur een e-mail naar ",C.jsx(Ty,{email:"info@example.com"}),". Ons toegewijde team zal snel reageren op uw vragen over energieprestatiecertificaten."]})]})]})]}),Zm="/EPCapp/assets/logo-c8d8d48a.png",Ly=z.footer`
   background-color: #f0f0f0;
   padding: 20px;
   margin-bottom: 10px;
