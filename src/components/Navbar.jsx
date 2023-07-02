@@ -11,10 +11,11 @@ const NavBar = styled.nav`
   background-color: #fff;
   color: #333;
   padding: 1rem;
+  justify-content: space-between;
 
   @media (max-width: 768px) {
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
 `;
 
@@ -91,7 +92,10 @@ const Overlay = styled.div`
 
 
 const LogoContainer = styled.div`
-  
+display: flex;
+align-items: center;
+flex-grow: 1; /* Add this line */
+justify-content: center; /* Add this line */
 `;
 
 const Logo = styled.img`
@@ -131,7 +135,9 @@ function Navbar() {
     return (
         <NavBar>
             <Overlay open={isOpen} onClick={closeMenu} />
+          <LogoContainer>
             <Logo src={thelogo} alt="Logo" isScrolling={isScrolling}/>
+          </LogoContainer>
         <Burger onClick={toggleMenu}>
           <svg width="24" height="24" viewBox="0 0 24 24">
             <path fill="#333" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />

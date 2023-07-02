@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
 
 
@@ -50,6 +50,17 @@ const CardContainer = styled.div`
     }
 `;
 
+const ButtonContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    gap: 20px;
+    ${marginX('auto')};
+    margin-top: 20px;
+    margin-bottom: 20px;
+`;
+
 
 const PriceCard = styled.div`
     width: 80px;
@@ -57,6 +68,7 @@ const PriceCard = styled.div`
     padding: 10px;
     padding-bottom: 10px;
     border-radius: 5%;
+    justify-content: space-between;
 
     @media (max-width: 1200px) {
         ${marginX('auto')};
@@ -76,12 +88,34 @@ const Price = styled.span`
     text-align: center;
 `;
 
+const Button = styled.button`
+    background-color: ${props => (props.isSelected ? '#0071F2' : 'white')};
+    color: ${props => (props.isSelected ? 'white' : 'black')};
+    border-radius: 5px;
+    border: none;
+    min-width: 90px;
+    ${paddingY('10px')};
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    &:hover{
+        cursor: pointer;
+    }
+    
+    @media (max-width: 1100px) {
+z        max-width: 50%;
+        text-align: center;
+    }
+`;
+
 
 
 
 function PriceTable() {
 
-    const pricing = [
+    const [epcSelected, setEpcSelected] = useState(true);
+    const [asbestSelected, setAsbestSelected] = useState(false);
+
+
+    const pricingAsbest = [
         {
             title: 'Studio / Appartement',
             price: '€445',
@@ -109,24 +143,74 @@ function PriceTable() {
             onrequest: true
         },
     ]
+
+    const pricingEPC = [
+        {
+            title: 'Studio',
+            price: '€95',
+        },
+        {
+            title: 'Appartement',
+            price: '€150',
+        },
+        {
+            title: 'Geslote Bebouwing',
+            price: '€165',
+        },
+        {
+            title: 'Halfopen bebouwing',
+            price: '€175',
+        },
+        {
+            title: 'Open bebouwing',
+            laag: '(1 bouwlaag)',
+            price: '€210',
+        },
+        {
+            title: 'Open bebouwing',
+            laag: '(≥2 bouwlagen)',
+            price: '€225',
+        },
+        {
+            title: 'Niet-residentieel',
+            price: 'op aanvraag',
+            onrequest: true
+        },
+        {
+            title: 'Gemene delen',
+            price: 'op aanvraag',
+            onrequest: true
+        },
+    ]
     
   return (
     <Container id="pricetable">
         <Title>Onze Tarieven</Title>
+        <ButtonContainer>
+            <Button onClick={() => {setEpcSelected(true); setAsbestSelected(false)}} isSelected={epcSelected}>EPC</Button>
+            <Button onClick={() => {setEpcSelected(false); setAsbestSelected(true)}} isSelected={asbestSelected}>Asbest</Button>
+        </ButtonContainer>
         <CardContainer>
-        
         {
-            pricing.map( (card, index) => (
+            asbestSelected ?
+            pricingAsbest.map( (card, index) => (
                 <PriceCard key={index}>
                     <PriceTitle>{card.title}</PriceTitle>
-                    <Price>{card.size}  {card.price}</Price>
+                    <Price>{card.size} {card.price}</Price>
+                </PriceCard>
+            )) :
+            pricingEPC.map( (card, index) => (
+                <PriceCard key={index}>
+                    <PriceTitle>
+                        {card.title}<br></br>
+                        <span style={{fontSize: 11, fontWeight: 400}}>{card.laag}</span>
+                    </PriceTitle>
+                    
+                    <Price>{card.size} {card.price}</Price>
                 </PriceCard>
             ))
         }
-
-        
         </CardContainer>
-    
     </Container>
   )
 }

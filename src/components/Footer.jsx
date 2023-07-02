@@ -6,8 +6,8 @@ import logo from '../assets/logo.png'
 
 const FooterContainer = styled.footer`
   background-color: #f0f0f0;
+  
   padding: 20px;
-  margin-bottom: 10px;
 `;
 
 const FooterContent = styled.div`
@@ -70,7 +70,7 @@ const Footer = () => {
           </Button>
           <Button href="tel:+1234567890">
             <ButtonIcon icon={faPhone} />
-            Call Us
+            Bel Ons
           </Button>
         </ButtonContainer>
         <AdditionalInfo>

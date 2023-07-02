@@ -61,7 +61,7 @@ const ContactIcon = styled(FontAwesomeIcon)`
 const ContactPage = () => {
   return (
     <ContactPageContainer id="contact">
-      <ContactTitle>Contact Us</ContactTitle>
+      <ContactTitle>Contacteer Ons</ContactTitle>
       <ContactCardContainer>
         <ContactCard>
           <ContactIcon icon={faPhone} />
