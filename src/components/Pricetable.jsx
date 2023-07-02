@@ -77,6 +77,7 @@ const Price = styled.span`
 
 
 
+
 function PriceTable() {
 
     const pricing = [
@@ -109,7 +110,7 @@ function PriceTable() {
     ]
     
   return (
-    <Container>
+    <Container id="pricetable">
         <Title>Onze Tarieven</Title>
         <CardContainer>
         

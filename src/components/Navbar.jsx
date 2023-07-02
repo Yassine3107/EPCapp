@@ -1,20 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
 import thelogo from '../assets/logo.png'
 
 const NavBar = styled.nav`
-    position: relative;
-    display: flex;
-    align-items: center;
-    
-    background-color: #fff;
-    color: #333;
-    padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  color: #333;
+  padding: 1rem;
 
-    @media (max-width: 768px) {
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 `;
 
 
@@ -94,12 +95,15 @@ const LogoContainer = styled.div`
 `;
 
 const Logo = styled.img`
-    width: 40px; /* Adjust the size of your logo */
-    height: 40px; /* Adjust the size of your logo */
+    width: ${props => (props.isScrolling ? '70px' : '100px')};
+    height: ${props => (props.isScrolling ? '70px' : '100px')};
+    transition: width 0.3s ease;
 `;
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isScrolling, setIsScrolling] = useState(false);
+
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -108,11 +112,26 @@ function Navbar() {
     const closeMenu = () => {
         setIsOpen(false);
       };
+
+      useEffect(() => {
+        const handleScroll = () => {
+          if (window.scrollY > 0) {
+            setIsScrolling(true);
+          } else {
+            setIsScrolling(false);
+          }
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
   
     return (
         <NavBar>
             <Overlay open={isOpen} onClick={closeMenu} />
-            <Logo src={thelogo} alt="Logo" />
+            <Logo src={thelogo} alt="Logo" isScrolling={isScrolling}/>
         <Burger onClick={toggleMenu}>
           <svg width="24" height="24" viewBox="0 0 24 24">
             <path fill="#333" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
