@@ -1161,20 +1161,21 @@ z        max-width: 50%;
   padding: 20px;
   margin-bottom: 30px;
 `,x2=I.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  width: 80%;
-  ${y2("auto")};
-  margin-top: 50px;
-
-  @media (max-width: 1200px) {
+  
     display: flex;
     flex-direction: column;
     align-items: left;
     padding: 20px;
     margin-bottom: 30px;
     width: 100%;
+
+  @media (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 80%;
+    ${y2("auto")};
+    margin-top: 50px;
   }
 `,k2=I.h2`
   font-size: 3rem;
