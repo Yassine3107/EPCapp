@@ -17,20 +17,21 @@ const Container = styled.div`
 `;
 
 const ReasonContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  width: 80%;
-  ${marginX('auto')};
-  margin-top: 50px;
-
-  @media (max-width: 1200px) {
+  
     display: flex;
     flex-direction: column;
     align-items: left;
     padding: 20px;
     margin-bottom: 30px;
     width: 100%;
+
+  @media (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 80%;
+    ${marginX('auto')};
+    margin-top: 50px;
   }
 `;
 
