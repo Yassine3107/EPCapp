@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import styled, { css } from 'styled-components'
 import asbestPricing from '../data/PricingAsbest.json'
 import epcPricing from '../data/PricingEPC.json'
+import { useLocation } from 'react-router-dom';
+
 
 const marginX = (value) => css`
     margin-left: ${value};
@@ -19,6 +21,7 @@ const Container = styled.div`
     justify-content: center;
     justify-items: center;
     margin-top: 40px;
+    margin-bottom: 50px;
 `;
 
 const Title = styled.h1`
@@ -43,10 +46,11 @@ const CardContainer = styled.div`
     width: 70%;
     ${marginX('auto')};
     margin-top: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 
     @media (max-width: 1200px) {
-        grid-template-columns: 1fr 1fr 1fr
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 30px;
     }
 `;
 
@@ -91,6 +95,13 @@ const Price = styled.span`
     text-align: center;
 `;
 
+const Span = styled.span`
+    color: gray;
+    width:  70%;
+    ${marginX('auto')};
+
+`;
+
 const Button = styled.button`
     background-color: ${props => (props.isSelected ? '#0071F2' : 'white')};
     color: ${props => (props.isSelected ? 'white' : 'black')};
@@ -121,7 +132,23 @@ function PriceTable() {
     const pricingAsbest = ""
 
     const pricingEPC = ""
+
+    useEffect(() => {
+        const scrollToElement = () => {
+          const { hash } = window.location;
+          if (hash) {
+            const element = document.querySelector(hash);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        };
     
+        // Scroll to the element after a short delay to ensure the page has rendered
+        setTimeout(scrollToElement, 100);
+      }, []);
+
+      
   return (
     <Container id="pricetable">
         <Title>Onze Tarieven</Title>
@@ -150,6 +177,7 @@ function PriceTable() {
             ))
         }
         </CardContainer>
+        <Span>* Voor bijkomende staalnames wordt een prijs van €30, inclusief btw aangerekend.</Span>
     </Container>
   )
 }

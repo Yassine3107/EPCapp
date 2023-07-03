@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled, { css } from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBoltLightning, faComments, faShieldHalved } from '@fortawesome/free-solid-svg-icons';
@@ -67,9 +67,25 @@ const Text = styled.p`
 `;
 
 const WhyUs = () => {
+
+  useEffect(() => {
+    const scrollToElement = () => {
+      const { hash } = window.location;
+      if (hash) {
+        const element = document.querySelector(hash);
+        console.log(hash)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    scrollToElement();
+  }, []);
+
   return (
-    <Container id="whyus">
-      <Title>Waarom voor ons kiezen?</Title>
+    <Container>
+      <Title id="whyus">Waarom voor ons kiezen?</Title>
       <ReasonContainer>
         <Reason>
           <Icon icon={faShieldHalved} />

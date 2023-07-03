@@ -112,7 +112,7 @@ function Hero() {
     <Container>
         <ContainerText>
             <Title>Uw Weg naar <br></br> Efficiëntie <TitleHighlight>Besparingen</TitleHighlight></Title>
-            <SubTitle>Wij bieden snelle en betrouwbare keuringsdiensten aan tegen competitieve prijzen, volledig in overeenstemming met de meest recente richtlijnen van de Vlaamse Overheid.</SubTitle>
+            <SubTitle>Wij bieden snelle en betrouwbare EPC & Asbest attesten aan tegen competitieve prijzen, volledig in overeenstemming met de meest recente richtlijnen van de Vlaamse Overheid.</SubTitle>
             <Button><a href="#contact" style={{color: 'black'}}>Contacteer ons</a></Button>
         </ContainerText>
         <ContainerImage>

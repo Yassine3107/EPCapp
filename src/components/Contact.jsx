@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -59,6 +59,22 @@ const ContactIcon = styled(FontAwesomeIcon)`
 `;
 
 const ContactPage = () => {
+
+  useEffect(() => {
+    const scrollToElement = () => {
+      const { hash } = window.location;
+      if (hash) {
+        const element = document.querySelector(hash);
+        console.log(hash)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    scrollToElement();
+  }, []);
+
   return (
     <ContactPageContainer id="contact">
       <ContactTitle>Contacteer Ons</ContactTitle>

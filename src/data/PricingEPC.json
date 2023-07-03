@@ -1,32 +1,30 @@
 [
     {
         "title": "Studio",
-        "price": "€95"
+        "price": "€145"
     },
     {
         "title": "Appartement",
-        "price": "€150"
-    },
-    {
-        "title": "Geslote Bebouwing",
-        "price": "€165"
-    },
-    {
-        "title": "Halfopen bebouwing",
         "price": "€175"
     },
     {
-        "title": "Open bebouwing",
-        "laag": "(1 bouwlaag)",
-        "price": "€210"
+        "title": "Rijwoning",
+        "price": "€190"
+    },
+    {
+        "title": "Halfopen bebouwing",
+        "price": "€205"
     },
     {
         "title": "Open bebouwing",
-        "laag": "(≥2 bouwlagen)",
         "price": "€225"
     },
     {
-        "title": "Niet-residentieel",
+        "title": "Gebouwen > 250㎡",
+        "price": "op aanvraag"
+    },
+    {
+        "title": "Klein niet-residentieel",
         "price": "op aanvraag",
         "onrequest": true
     },

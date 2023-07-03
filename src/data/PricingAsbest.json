@@ -1,27 +1,22 @@
 [
     {
         "title": "Studio / Appartement",
-        "price": "€445"
+        "price": "€465"
     },
     {
-        "title": "Geslote Bebouwing",
-        "price": "€495"
+        "title": "Rijwoning",
+        "price": "€525"
     },
     {
         "title": "Halfopen bebouwing",
-        "price": "€545"
+        "price": "€565"
     },
     {
         "title": "Open bebouwing",
-        "price": "€595"
+        "price": "€625"
     },
     {
-        "title": "Niet-residentieel",
-        "price": "op aanvraag",
-        "onrequest": true
-    },
-    {
-        "title": "Gemene delen",
+        "title": "Gebouwen > 250㎡",
         "price": "op aanvraag",
         "onrequest": true
     }
