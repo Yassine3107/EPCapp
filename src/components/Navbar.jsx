@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import styled from 'styled-components';
+import styled, { css } from 'styled-components'
 import thelogo from '../assets/logo.png'
+
+const marginX = (value) => css`
+    margin-left: ${value};
+    margin-right: ${value};
+`;
 
 const NavBar = styled.nav`
   position: sticky;
@@ -12,11 +17,13 @@ const NavBar = styled.nav`
   color: #333;
   padding: 1rem;
   justify-content: space-between;
+  ${marginX('auto')};
 
   @media (max-width: 768px) {
     flex-wrap: wrap;
     justify-content: center;
   }
+  
 `;
 
 
@@ -92,16 +99,26 @@ const Overlay = styled.div`
 
 
 const LogoContainer = styled.div`
-display: flex;
-align-items: center;
-flex-grow: 1; /* Add this line */
-justify-content: center; /* Add this line */
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: left; 
+
+  @media (max-width: 769px) {
+    justify-content: center; 
+  }
 `;
 
 const Logo = styled.img`
-    width: ${props => (props.isScrolling ? '70px' : '100px')};
-    height: ${props => (props.isScrolling ? '70px' : '100px')};
-    transition: width 0.3s ease;
+    width: 100px;
+    height: 100px;
+
+    @media (max-width: 769px) {
+      width: ${props => (props.isScrolling ? '70px' : '100px')};
+      height: ${props => (props.isScrolling ? '70px' : '100px')};
+      transition: width 0.3s ease;justify-content: center; 
+    }
+    
 `;
 
 function Navbar() {
@@ -155,17 +172,17 @@ function Navbar() {
           <MenuItem href="#pricetable" onClick={closeMenu}>
             Tarieven
           </MenuItem>
-          <MenuItem href="#contact" onClick={closeMenu}>
-            Contact
-          </MenuItem>
           <MenuItem href="#whyus" onClick={closeMenu}>
             Over ons
           </MenuItem>
+          <MenuItem href="#contact" onClick={closeMenu}>
+            Contact
+          </MenuItem>
         </Menu>
         <NavItem href="/">Home</NavItem>
-        <NavItem href="/#pricetable">Tarieven</NavItem>
-        <NavItem href="/#contact">Contact</NavItem>
-        <NavItem href="/#whyus">Over ons</NavItem>
+        <NavItem href="#pricetable">Tarieven</NavItem>
+        <NavItem href="#whyus">Over ons</NavItem>
+        <NavItem href="#contact">Contact</NavItem>
       </NavBar>
     );
 }

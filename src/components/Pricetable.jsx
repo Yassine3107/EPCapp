@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
-
-
+import asbestPricing from '../data/PricingAsbest.json'
+import epcPricing from '../data/PricingEPC.json'
 
 const marginX = (value) => css`
     margin-left: ${value};
@@ -63,18 +63,21 @@ const ButtonContainer = styled.div`
 
 
 const PriceCard = styled.div`
-    width: 80px;
+    width: 300px;
+    height: 155px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 10px;
     padding-bottom: 10px;
     border-radius: 5%;
     justify-content: space-between;
+    text-align: center;
 
     @media (max-width: 1200px) {
         ${marginX('auto')};
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 80px
     }
 `;
 
@@ -115,73 +118,9 @@ function PriceTable() {
     const [asbestSelected, setAsbestSelected] = useState(false);
 
 
-    const pricingAsbest = [
-        {
-            title: 'Studio / Appartement',
-            price: '€445',
-        },
-        {
-            title: 'Geslote Bebouwing',
-            price: '€495',
-        },
-        {
-            title: 'Halfopen bebouwing',
-            price: '€545',
-        },
-        {
-            title: 'Open bebouwing',
-            price: '€595',
-        },
-        {
-            title: 'Niet-residentieel',
-            price: 'op aanvraag',
-            onrequest: true
-        },
-        {
-            title: 'Gemene delen',
-            price: 'op aanvraag',
-            onrequest: true
-        },
-    ]
+    const pricingAsbest = ""
 
-    const pricingEPC = [
-        {
-            title: 'Studio',
-            price: '€95',
-        },
-        {
-            title: 'Appartement',
-            price: '€150',
-        },
-        {
-            title: 'Geslote Bebouwing',
-            price: '€165',
-        },
-        {
-            title: 'Halfopen bebouwing',
-            price: '€175',
-        },
-        {
-            title: 'Open bebouwing',
-            laag: '(1 bouwlaag)',
-            price: '€210',
-        },
-        {
-            title: 'Open bebouwing',
-            laag: '(≥2 bouwlagen)',
-            price: '€225',
-        },
-        {
-            title: 'Niet-residentieel',
-            price: 'op aanvraag',
-            onrequest: true
-        },
-        {
-            title: 'Gemene delen',
-            price: 'op aanvraag',
-            onrequest: true
-        },
-    ]
+    const pricingEPC = ""
     
   return (
     <Container id="pricetable">
@@ -193,13 +132,13 @@ function PriceTable() {
         <CardContainer>
         {
             asbestSelected ?
-            pricingAsbest.map( (card, index) => (
+            asbestPricing.map( (card, index) => (
                 <PriceCard key={index}>
                     <PriceTitle>{card.title}</PriceTitle>
                     <Price>{card.size} {card.price}</Price>
                 </PriceCard>
             )) :
-            pricingEPC.map( (card, index) => (
+            epcPricing.map( (card, index) => (
                 <PriceCard key={index}>
                     <PriceTitle>
                         {card.title}<br></br>

@@ -72,6 +72,10 @@ const SubTitle = styled.h5`
     @media (max-width: 1100px) {
         font-size: .75rem;
     }
+
+    @media (min-width: 1000px) {
+        width: 60%;
+    }
 `;
 
 const Button = styled.button`
