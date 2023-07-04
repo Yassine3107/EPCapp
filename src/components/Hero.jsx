@@ -65,12 +65,12 @@ const SubTitle = styled.h5`
     color: grey;
 
     @media (max-width: 1200px) {
-        font-size: .80rem;
+        font-size: .85rem;
         text-align: center;
     }
 
     @media (max-width: 1100px) {
-        font-size: .75rem;
+        font-size: .80rem;
     }
 
     @media (min-width: 1000px) {
@@ -111,8 +111,8 @@ function Hero() {
   return (
     <Container>
         <ContainerText>
-            <Title>Uw Weg naar <br></br> Efficiëntie <TitleHighlight>Besparingen</TitleHighlight></Title>
-            <SubTitle>Wij bieden snelle en betrouwbare EPC & Asbest attesten aan tegen competitieve prijzen, volledig in overeenstemming met de meest recente richtlijnen van de Vlaamse Overheid.</SubTitle>
+            <Title id="home">Betrouwbaar en snel <br></br> een <TitleHighlight>EPC-attest</TitleHighlight> of <TitleHighlight>asbestkeuring</TitleHighlight></Title>
+            <SubTitle>Wij bieden snelle en betrouwbare EPC-attesten en asbestinventarissen aan tegen competitieve en scherpe prijzen, volledig in overeenstemming met de meest recente richtlijnen van de Vlaamse Overheid. De attesten en keuringen die we leveren proberen we zo snel mogelijk uit te voeren, zodat u uw benodigde attesten op tijd hebt! We hebben een luisterend oor voor onze klanten en nemen hun woorden ten harte.</SubTitle>
             <Button><a href="#contact" style={{color: 'black'}}>Contacteer ons</a></Button>
         </ContainerText>
         <ContainerImage>

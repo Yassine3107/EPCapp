@@ -83,14 +83,14 @@ const ContactPage = () => {
           <ContactIcon icon={faPhone} />
           <h3>Telefonisch contact</h3>
           <p>
-            Bel ons op <PhoneNumber number="1234567890" /> voor directe ondersteuning en advies. Ons team staat klaar om uw vragen te beantwoorden over energieprestatiecertificaten.
+            Bel ons op <PhoneNumber number="1234567890" /> voor directe ondersteuning en advies. Ons team staat klaar om uw vragen te beantwoorden.
           </p>
         </ContactCard>
         <ContactCard>
           <ContactIcon icon={faEnvelope} />
           <h3>E-mailcontact</h3>
           <p>
-            Voor schriftelijke communicatie, stuur een e-mail naar <Email email="info@example.com" />. Ons toegewijde team zal snel reageren op uw vragen over energieprestatiecertificaten.
+            Voor schriftelijke communicatie, stuur een e-mail naar <Email email="info@example.com" />. Ons toegewijde team zal snel reageren op uw vragen.
           </p>
         </ContactCard>
       </ContactCardContainer>

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import YouTubeVideo from './Common/YoutubeVideo';
 import PlumberImage from '../assets/asbest.jpg';
+
 
 const marginX = (value) => css`
   margin-left: ${value};
@@ -92,13 +93,13 @@ const Paragraph = styled.h5`
   color: grey;
 
   @media (max-width: 800px) {
-      font-size: .90rem;
-      text-align: center;
-  }
+    font-size: .95rem;
+    text-align: center;
+}
 
-  @media (max-width: 1100px) {
-      font-size: .85rem;
-  }
+@media (max-width: 1100px) {
+    font-size: .90rem;
+}
 
   @media (min-width: 1000px) {
       width: 60%;
@@ -123,6 +124,7 @@ const Button = styled.button`
   ${paddingY('10px')};
   ${marginY('5px')};
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
   &:hover {
     cursor: pointer;
   }
@@ -143,11 +145,36 @@ const Image = styled.img`
 `;
 
 function InformationAsbest() {
+
+
+  const handleBtnClick = (link) => {
+    window.open(link, '_blank');
+  }
+
+  useEffect(() => {
+    const scrollToElement = () => {
+      const { hash } = window.location;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          const offset = -150;
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          const scrollPosition = elementPosition + offset;
+          window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+        }
+      }
+    };
+  
+    // Scroll to the element after a short delay to ensure the page has rendered
+    setTimeout(scrollToElement, 100);
+  }, []);
+  
+  
   return (
     <Container>
       <InfoContainer>
         <ParagraphContainer>
-          <Title>Het asbestattest of asbestinventarisatie (asbestkeuring)</Title>
+          <Title id="asbest">Het asbestattest of asbestinventarisatie (asbestkeuring)</Title>
           <Paragraph>
             Vanaf 23 november 2022 is het asbestattest verplicht bij de verkoop van gebouwen die voor het jaar 2001 zijn gebouwd. Tegen 2032 moet elke gebouweigenaar van een gebouw dat voor 2001 is gebouwd, beschikken over een asbestattest. 
           </Paragraph>
@@ -168,8 +195,8 @@ function InformationAsbest() {
             <YouTubeVideo videoId="S8r1F8uLZhI" width="80" />
         </ImageContainer>
         <ButtonContainer>
-          <Span>Wij staan open om al jouw vragen over het energieprestatiecertificaat (EPC) te beantwoorden!</Span>
-          <Button>MEER INFORMATIE OVER HET ASBESTATTEST?</Button>
+          <Span>Wij staan open om al jouw vragen over het asbestattest te beantwoorden!</Span>
+          <Button onClick={() => {handleBtnClick("https://ovam.vlaanderen.be/het-asbestattest")}}>MEER INFORMATIE OVER HET ASBESTATTEST?</Button>
         </ButtonContainer>
       </InfoContainer>
     </Container>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import YouTubeVideo from './Common/YoutubeVideo';
 import PlumberImage from '../assets/epcvalues.png';
@@ -92,12 +92,12 @@ const Paragraph = styled.h5`
   color: grey;
 
   @media (max-width: 800px) {
-      font-size: .90rem;
+      font-size: .95rem;
       text-align: center;
   }
 
   @media (max-width: 1100px) {
-      font-size: .85rem;
+      font-size: .90rem;
   }
 
   @media (min-width: 1000px) {
@@ -124,6 +124,7 @@ const Button = styled.button`
   ${paddingY('10px')};
   ${marginY('5px')};
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
   &:hover {
     cursor: pointer;
   }
@@ -144,11 +145,34 @@ const Image = styled.img`
 `;
 
 function InformationEpc() {
+
+  const handleBtnClick = (link) => {
+    window.open(link, '_blank');
+  }
+
+  useEffect(() => {
+    const scrollToElement = () => {
+      const { hash } = window.location;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          const offset = -150;
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          const scrollPosition = elementPosition + offset;
+          window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+        }
+      }
+    };
+  
+    // Scroll to the element after a short delay to ensure the page has rendered
+    setTimeout(scrollToElement, 100);
+  }, []);
+
   return (
     <Container>
       <InfoContainer>
         <ParagraphContainer>
-          <Title>Een EPC attest of keuring in heel Vlaanderen</Title>
+          <Title id="epc">Een EPC attest of keuring in heel Vlaanderen</Title>
           <Paragraph>
             Een energieprestatiecertificaat is een certificaat waarmee je kan aflezen hoe energiezuinig een gebouw is.
             Het is verplicht bij verkoop of verhuur. Het EPC vertoont een energielabel, net zoals op elektrische
@@ -176,8 +200,8 @@ function InformationEpc() {
         </ImageContainer>
         <ButtonContainer>
           <Span>Wij staan open om al jouw vragen over het energieprestatiecertificaat (EPC) te beantwoorden!</Span>
-          <Button>MEER INFORMATIE OVER HET EPC?</Button>
-          <Button>HEBT U EEN EPC NODIG?</Button>
+          <Button onClick={ () => {handleBtnClick("https://www.vlaanderen.be/energieprestatiecertificaat-epc-bij-verkoop-of-verhuur-van-een-wooneenheid")}}>MEER INFORMATIE OVER HET EPC?</Button>
+          <Button onClick={() => {handleBtnClick("https://apps.energiesparen.be/epc-wegwijzer-mei-2023 ")}} >HEBT U EEN EPC NODIG?</Button>
         </ButtonContainer>
       </InfoContainer>
 

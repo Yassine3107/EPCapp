@@ -28,7 +28,6 @@ const NavBar = styled.nav`
     flex-wrap: wrap;
     justify-content: center;
   }
-  
 `;
 
 
@@ -129,7 +128,7 @@ const LogoContainer = styled.div`
   justify-content: left; 
 
   @media (max-width: 769px) {
-    // justify-content: center; 
+    justify-content: center; 
   }
 `;
 
@@ -237,9 +236,9 @@ function Navbar() {
           {
             
             ( 
-              (location.pathname.includes('asbest') || location.pathname.includes('epc')) ?
+              (location.pathname.includes('asbest') || location.pathname.includes('epc') || location.pathname.includes('policy') || location.pathname.includes('terms') || location.pathname.includes('faq'))   ?
             <>
-              <MenuItem to="/" onClick={closeMenu}>
+              <MenuItem to="/#home" onClick={closeMenu}>
                 Home
               </MenuItem>
               <MenuItem to={{ pathname: "/", hash: "#pricetable" }} onClick={closeMenu}>
@@ -260,16 +259,16 @@ function Navbar() {
             </>
             :
             <>
-              <MenuItem to="/" onClick={closeMenu}>
+              <ScrollLinkMob to="home" smooth={true} duration={500} offset={-120} onClick={closeMenu}>
                 Home
-              </MenuItem>
+              </ScrollLinkMob>
               <ScrollLinkMob to="pricetable" smooth={true} duration={500} offset={-120} onClick={closeMenu}>
                 Tarieven
               </ScrollLinkMob>
-              <MenuItem to="/epc"  onClick={closeMenu}>
+              <MenuItem to="/epc#epc"  onClick={closeMenu}>
                 EPC
               </MenuItem>
-              <MenuItem to="/asbest" onClick={closeMenu}>
+              <MenuItem to="/asbest#asbest" onClick={closeMenu}>
                 Asbest
               </MenuItem>
               <ScrollLinkMob to="whyus" smooth={true} duration={500} offset={-120} onClick={closeMenu}>
@@ -289,8 +288,8 @@ function Navbar() {
             <NavItem to="/">Home</NavItem>
             <NavItem to="/#pricetable">Tarieven</NavItem>
             <NavItem to="/#whyus" >Over ons</NavItem>
-            <NavItem to="/epc">EPC</NavItem>
-            <NavItem to="/asbest">Asbest</NavItem>
+            <NavItem to="/epc#epc">EPC</NavItem>
+            <NavItem to="/asbest#asbest">Asbest</NavItem>
             <NavItem to="/#contact">Contact</NavItem>
           </>
           :
@@ -313,7 +312,7 @@ function Navbar() {
           <ButtonIcon icon={faEnvelope} />
         </FloatingButton>
       </FloatingButtonWrapper>
-      <Cookie/>
+      {/* <Cookie/> */}
       </NavBar>
     );
 }

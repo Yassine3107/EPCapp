@@ -105,8 +105,8 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} All Rights Reserved
           </AdditionalInfo>
           <AdditionalInfo>
-            <LinkNav to="/terms">Terms of Service</LinkNav> |
-            <LinkNav to="/policy">Privacy Policy</LinkNav> |
+            <LinkNav to="/terms">Algemene Voorwaarden</LinkNav> |
+            <LinkNav to="/policy">Privacyverklaring</LinkNav> |
             <LinkNav to="/faq">FAQ</LinkNav>
           </AdditionalInfo>
         </FooterContent>

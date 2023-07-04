@@ -142,14 +142,18 @@ function PriceTable() {
           if (hash) {
             const element = document.querySelector(hash);
             if (element) {
-              element.scrollIntoView({ behavior: 'smooth' });
+              const offset = -120;
+              const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+              const scrollPosition = elementPosition + offset;
+              window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
             }
           }
         };
-    
+      
         // Scroll to the element after a short delay to ensure the page has rendered
         setTimeout(scrollToElement, 100);
       }, []);
+      
 
       
   return (
