@@ -112,7 +112,7 @@ function Hero() {
     <Container>
         <ContainerText>
             <Title id="home">Betrouwbaar en snel <br></br> een <TitleHighlight>EPC-attest</TitleHighlight> of <TitleHighlight>asbestkeuring</TitleHighlight></Title>
-            <SubTitle>Wij bieden snelle en betrouwbare EPC-attesten en asbestinventarissen aan tegen competitieve en scherpe prijzen, volledig in overeenstemming met de meest recente richtlijnen van de Vlaamse Overheid. De attesten en keuringen die we leveren proberen we zo snel mogelijk uit te voeren, zodat u uw benodigde attesten op tijd hebt! We hebben een luisterend oor voor onze klanten en nemen hun woorden ten harte.</SubTitle>
+            <SubTitle>Wij bieden snelle en betrouwbare EPC-attesten en asbestinventarissen aan tegen competitieve en scherpe prijzen, volledig in overeenstemming met de meest recente richtlijnen van de Vlaamse Overheid. De attesten en keuringen die we leveren proberen we zo snel mogelijk uit te voeren, zodat u uw benodigde attesten op tijd hebt! We hebben een luisterend oor voor onze klanten en nemen uw woorden ten harte.</SubTitle>
             <Button><a href="#contact" style={{color: 'black'}}>Contacteer ons</a></Button>
         </ContainerText>
         <ContainerImage>

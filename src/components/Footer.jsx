@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
+import Cert from './Cert';
 
 const FooterContainer = styled.footer`
   background-color: #f0f0f0;
@@ -101,6 +102,7 @@ const Footer = () => {
           <AdditionalInfo>
             EPC 24/7 | België | Antwerpen
           </AdditionalInfo>
+          <Cert/>
           <AdditionalInfo>
             &copy; {new Date().getFullYear()} All Rights Reserved
           </AdditionalInfo>

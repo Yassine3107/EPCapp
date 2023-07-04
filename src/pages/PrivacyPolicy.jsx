@@ -132,7 +132,7 @@ const PrivacyPolicy = () => {
 
                 </p>
                 <p>
-                  Indien u onnauwkeurige of onvolledige persoonsgegevens heeft opgemerkt, heeft u het recht om deze te laten corrigeren. In eerste instantie wordt van u verwacht dat u zelf eventuele onnauwkeurigheden of onvolledigheden aanpast. Indien u niet in staat bent om dit zelf te doen, kunt u een aanvullende verklaring verstrekken aan EPC247 met de correcte gegevens. EPC247 zal binnen een termijn van één (1) maand na ontvangst van de aanvullende verklaring gevolg geven aan uw verzoek. 
+                  Indien u onnauwkeurige of onvolledige persoonsgegevens heeft opgemerkt, heeft u het recht om deze te laten corrigeren. In eerste instantie wordt van u verwacht dat u zelf eventuele onnauwkeurigheden of onvolledigheden aanpast. Indien u niet in staat bent om dit zelf te doen, kunt u een aanvullende verklaring verstrekken aan EPC247 met de correcte gegevens. EPC247 zal binnen een termijn van één maand na ontvangst van de aanvullende verklaring gevolg geven aan uw verzoek. 
 
                 </p>
                 <p>

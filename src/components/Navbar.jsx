@@ -137,8 +137,8 @@ const Logo = styled.img`
     height: 100px;
 
     @media (max-width: 769px) {
-      width: ${props => (props.isScrolling ? '70px' : '100px')};
-      height: ${props => (props.isScrolling ? '70px' : '100px')};
+      width: ${props => (props.isScrolling ? '90px' : '100px')};
+      height: ${props => (props.isScrolling ? '90px' : '100px')};
       transition: width 0.3s ease;
       justify-content: center; 
     }
@@ -178,7 +178,6 @@ function Navbar() {
     const [isScrolling, setIsScrolling] = useState(false);
     const body = `
       Beste,\n
-
       Ik ben geïnteresseerd in uw diensten, zou u mij kunnen contacteren?
       \n
       Vriendelijke groeten
@@ -193,11 +192,11 @@ function Navbar() {
       };
 
     const handleEmailClick = () => {
-      window.location.href = `mailto:example@example.com?body=${body}`;
+      window.location.href = `mailto:info@epc247.be?body=${body}`;
     };
 
     const handleTelClick = () => {
-      window.location.href = 'tel:123345678';
+      window.location.href = 'tel:0489007883';
     };
 
       useEffect(() => {
@@ -244,10 +243,10 @@ function Navbar() {
               <MenuItem to={{ pathname: "/", hash: "#pricetable" }} onClick={closeMenu}>
                 Tarieven
               </MenuItem>
-              <MenuItem to="/epc"  onClick={closeMenu}>
+              <MenuItem to="/epc#epc"  onClick={closeMenu}>
                 EPC
               </MenuItem>
-              <MenuItem to="/asbest" onClick={closeMenu}>
+              <MenuItem to="/asbest#asbest" onClick={closeMenu}>
                 Asbest
               </MenuItem>
               <MenuItem to="/#whyus" onClick={closeMenu}>
@@ -297,8 +296,8 @@ function Navbar() {
             <NavItem to="/">Home</NavItem>
             <ScrollLinkNav to="pricetable" smooth={true} duration={500} offset={-120}>Tarieven</ScrollLinkNav>
             <ScrollLinkNav to="whyus" smooth={true} duration={500} offset={-120}>Over ons</ScrollLinkNav>
-            <NavItem to="/epc">EPC</NavItem>
-            <NavItem to="/asbest">Asbest</NavItem>
+            <NavItem to="/epc#epc">EPC</NavItem>
+            <NavItem to="/asbest#asbest">Asbest</NavItem>
             <ScrollLinkNav to="contact" smooth={true} duration={500} offset={-120}>Contact</ScrollLinkNav>
           </>
           )

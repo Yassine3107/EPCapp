@@ -13,7 +13,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  margin-bottom: 30px;
+  padding-bottom: 0px;
 `;
 
 const ReasonContainer = styled.div`
