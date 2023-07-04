@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import Cookie from './Cookie';
 
 const marginX = (value) => css`
     margin-left: ${value};
@@ -151,7 +152,7 @@ const FloatingButtonWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 9999;
+  z-index: 10;
 `;
 
 const FloatingButton = styled.div`
@@ -312,6 +313,7 @@ function Navbar() {
           <ButtonIcon icon={faEnvelope} />
         </FloatingButton>
       </FloatingButtonWrapper>
+      <Cookie/>
       </NavBar>
     );
 }

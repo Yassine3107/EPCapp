@@ -88,7 +88,22 @@ const Title = styled.h1`
   font-size: 35px;
 `;
 
-const Paragraph = styled.p`
+const Paragraph = styled.h5`
+  color: grey;
+
+  @media (max-width: 800px) {
+      font-size: .90rem;
+      text-align: center;
+  }
+
+  @media (max-width: 1100px) {
+      font-size: .85rem;
+  }
+
+  @media (min-width: 1000px) {
+      width: 60%;
+  }
+  ${marginY('10px')};
   ${marginY('10px')};
 `;
 

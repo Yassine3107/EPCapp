@@ -1,9 +1,14 @@
 import { useState } from 'react'
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
-import Asbest from './pages/Asbest';
+import { BrowserRouter as Router, Routes } from 'react-router-dom';
 
+
+import Asbest from './pages/Asbest';
 import EPC from './pages/EPC'
+import FAQ from './pages/FAQ';
 import Home from './Pages/Home'
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Terms from './pages/TermsAndConditions';
 
 
 const router = createBrowserRouter([
@@ -22,12 +27,19 @@ const router = createBrowserRouter([
 ])
 
 function App() {
+  const basename = '/EPCapp';
 
   return (
-    <div className="App">
-      <RouterProvider router={router}/>
-    </div>
-        
+    <Router basename={basename}>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/epc" element={<EPC />} />
+      <Route path="/asbest" element={<Asbest />} />
+      <Route path="/terms" element={<Terms />} />
+      <Route path="/policy" element={<PrivacyPolicy />} />
+      <Route path="/faq" element={<FAQ />} />
+    </Routes>
+  </Router>
 
   )
 }

@@ -68,7 +68,6 @@ const ButtonContainer = styled.div`
 
 const PriceCard = styled.div`
     width: 300px;
-    height: 155px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 10px;
     padding-bottom: 10px;
@@ -82,6 +81,10 @@ const PriceCard = styled.div`
         flex-direction: column;
         align-items: center;
         width: 80px
+    }
+
+    @media (min-width: 1200px) {
+        height: 155px;
     }
 `;
 
@@ -177,7 +180,7 @@ function PriceTable() {
             ))
         }
         </CardContainer>
-        <Span>* Voor bijkomende staalnames wordt een prijs van €30, inclusief btw aangerekend.</Span>
+        { asbestSelected && <Span>* Voor bijkomende staalnames wordt een prijs van €30 inclusief btw aangerekend.</Span>}
     </Container>
   )
 }
