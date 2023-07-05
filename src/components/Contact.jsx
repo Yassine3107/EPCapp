@@ -84,7 +84,7 @@ const ContactPage = () => {
           <ContactIcon icon={faPhone} />
           <h3>Telefonisch contact</h3>
           <p>
-            Bel ons op <PhoneNumber number="0489007883" /> voor directe ondersteuning en advies. Ons team staat klaar om uw vragen te beantwoorden.
+            Bel ons op <PhoneNumber number="+32489007883" /> voor directe ondersteuning en advies. Ons team staat klaar om uw vragen te beantwoorden.
           </p>
         </ContactCard>
         <ContactCard>
@@ -100,7 +100,7 @@ const ContactPage = () => {
         </svg>
           <h3>WhatsApp</h3>
           <p>
-            Om ons via WhatsApp te sturen klik <WhatsApp/>. Ons toegewijde team zal snel reageren op uw vragen.
+            Om ons via WhatsApp te sturen klik <WhatsApp number="+32489007883"/>. Ons toegewijde team zal snel reageren op uw vragen.
           </p>
         </ContactCard>
       </ContactCardContainer>
